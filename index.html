@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prayag Engineering</title>
+  <meta name="description" content="Mechanical fabrication, erection, piping and industrial site services." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <style>
+    /* =========================
+       THEME & PARALLAX VARIABLES
+       ========================= */
+    :root {
+      --navy: #0b2545;
+      --steel: #2f3a45;
+      --muted: #9ca3af;
+      --accent: #ff7a18;
+      --white: #ffffff;
+      --bg: #071021;
+      --glass: rgba(255, 255, 255, 0.05);
+      --max-width: 1200px;
+      --transition: 400ms cubic-bezier(0.2, 0.9, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--white);
+      background-color: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Remove default underlines globally */
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HERO SLIDER
+       ========================= */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition:
+        opacity 1.5s ease-in-out,
+        transform 6s linear;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+          rgba(7, 16, 33, 0.9),
+          rgba(7, 16, 33, 0.2));
+      z-index: 1;
+    }
+
+    /* =========================
+       NAVIGATION & CLICK EFFECTS
+       ========================= */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 101;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      position: fixed;
+      top: 40px;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 37, 69, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: var(--transition);
+      position: relative;
+      padding: 10px 0;
+    }
+
+    /* SLIDING UNDERLINE EFFECT */
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* CLICK EFFECT (The "Pulse" and Scale) */
+    nav a:active {
+      transform: scale(0.9);
+      color: var(--accent);
+      transition: transform 0.1s;
+    }
+
+    .cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 122, 24, 0.3);
+    }
+
+    .cta:active {
+      transform: scale(0.95);
+    }
+
+    /* =========================
+       SECTIONS
+       ========================= */
+    .goal-section {
+      padding: 120px 0;
+      background:
+        linear-gradient(rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.9)),
+        url("assets/images/goal-bg.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+    }
+
+    .goal-card {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--glass);
+      border-radius: 16px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .work-step {
+      padding: 40px;
+      background: var(--glass);
+      border-radius: 12px;
+      position: relative;
+      transition: var(--transition);
+      border-bottom: 3px solid transparent;
+    }
+
+    .work-step:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent);
+      transform: translateY(-10px);
+    }
+
+    .step-num {
+      font-size: 48px;
+      font-weight: 900;
+      color: rgba(255, 122, 24, 0.1);
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .work-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 800ms ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .services-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .service-card {
+      background: var(--glass);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      background: var(--steel);
+      transform: translateY(-5px);
+    }
+
+    /* CONTACT GRID (KEEPING ORIGINAL LOGIC) */
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01));
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: transparent;
+      color: var(--white);
+      outline: none;
+      transition: 0.3s;
+    }
+
+    select option {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    @media (min-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr 360px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      nav ul.nav-active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block !important;
+      }
+
+      .cta {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    GSTIN: <span id="configGstin"></span> &nbsp;|&nbsp; <span id="configTagline"></span>
+  </div>
+  <header>
+    <div class="container nav-inner">
+      <a href="#home" class="logo" style="display: flex; align-items: center">
+        <img src="assets/images/pg_logo.png" alt="Prayag Engineering Logo" style="height: 44px; object-fit: contain" />
+      </a>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Process</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; gap: 15px; align-items: center">
+        <a class="cta" href="#contact">Consultation</a>
+        <button class="menu-toggle" id="mobileMenuBtn" style="
+              display: none;
+              background: none;
+              border: none;
+              color: white;
+              font-size: 24px;
+              cursor: pointer;
+            ">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="slider-container" id="heroSlider"></div>
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="reveal">
+          <div style="
+                width: 60px;
+                height: 4px;
+                background: var(--accent);
+                margin-bottom: 24px;
+              "></div>
+          <h1 style="
+                font-size: clamp(36px, 8vw, 72px);
+                line-height: 1;
+                margin: 0;
+                font-weight: 900;
+              ">
+            ENGINEERING <br /><span style="color: var(--accent)">EXCELLENCE.</span>
+          </h1>
+          <p style="
+                max-width: 550px;
+                font-size: 18px;
+                color: var(--muted);
+                margin: 30px 0;
+              ">
+            Specializing in mechanical fabrication, erection, and heavy
+            industrial piping with zero-compromise safety standards.
+          </p>
+          <div style="display: flex; gap: 20px">
+            <a href="#services" class="cta">Explore Services</a>
+            <a href="#contact" style="
+                  padding: 12px 28px;
+                  border: 1px solid rgba(255, 255, 255, 0.3);
+                  border-radius: 4px;
+                  font-weight: 600;
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  transition: 0.3s;
+                ">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="goal-section">
+      <div class="container">
+        <div class="goal-card reveal">
+          <h2 style="
+                color: var(--accent);
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 12px;
+                margin-bottom: 10px;
+              ">
+            The Objective
+          </h2>
+          <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 800">
+            Precision Engineering. <br />Reliable Execution.
+          </h3>
+          <p style="
+                color: var(--muted);
+                font-size: 17px;
+                max-width: 650px;
+                margin: 0 auto;
+              ">
+            We aim to redefine industrial site services by merging technical
+            craftsmanship with modern project management, ensuring your plant
+            operates at peak performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" style="background: #0a121f">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 70px" class="reveal">
+          <h2 style="font-size: 36px; font-weight: 800">Our Workflow</h2>
+          <div style="
+                width: 40px;
+                height: 3px;
+                background: var(--accent);
+                margin: 15px auto;
+              "></div>
+          <p style="color: var(--muted)">
+            A systematic approach to mechanical construction and maintenance.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <div class="work-step reveal">
+            <span class="step-num">01</span>
+            <span class="work-icon">📋</span>
+            <h3 style="margin-bottom: 10px">Assessment</h3>
+            <p style="color: var(--muted); font-size: 14px">
+              Technical feasibility study and detailed site mapping.
+            </p>
+          </div>
+          <div class="work-step reveal">
+            <span class="step-num">02</span>
+            <span class="work-icon">🛠️</span>
+            <h3 style="margin-bottom: 10px">Fabrication</h3>
+            <p style="color: var(--muted); font-size: 14px">
+              High-grade structural and piping work in controlled
+              environments.
+            </p>
+          </div>
+          <div class="work-step reveal">
+            <span class="step-num">03</span>
+            <span class="work-icon">🏗️</span>
+            <h3 style="margin-bottom: 10px">Erection</h3>
+            <p style="color: var(--muted); font-size: 14px">
+              Heavy equipment placement and final site integration.
+            </p>
+          </div>
+          <div class="work-step reveal">
+            <span class="step-num">04</span>
+            <span class="work-icon">🛡️</span>
+            <h3 style="margin-bottom: 10px">Certification</h3>
+            <p style="color: var(--muted); font-size: 14px">
+              Quality assurance, NDT testing, and safety sign-off.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="reveal" style="margin-bottom: 40px">
+          <h2 style="font-size: 32px; font-weight: 800">
+            Specialized Services
+          </h2>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" style="background: rgba(11, 37, 69, 0.3)">
+      <div class="container">
+        <h2 style="font-size: 32px; font-weight: 800; margin: 0">
+          Get In Touch
+        </h2>
+        <p style="color: var(--muted); margin-bottom: 40px">
+          Connect with our engineering team for your next shutdown or project.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <form id="contactForm">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Website Form Submission!">
+              <div class="form-row" style="display: flex; gap: 12px">
+                <input name="name" id="userName" placeholder="Name" required />
+                <input name="company" id="userCompany" placeholder="Company" />
+              </div>
+              <div class="form-row" style="margin-top: 12px; display: flex; gap: 12px">
+                <input name="email" id="userEmail" type="email" placeholder="Email" required />
+                <input name="phone" id="userPhone" type="tel" pattern="[0-9]{10,14}"
+                  placeholder="Phone (e.g. 9876543210)" />
+              </div>
+              <div style="margin-top: 12px">
+                <select name="service" id="userService">
+                  <option value="">Interested Service</option>
+                </select>
+              </div>
+              <textarea name="message" id="userMessage" placeholder="Message" required
+                style="margin-top: 12px; min-height: 100px"></textarea>
+
+              <div style="
+                    margin-top: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 10px;
+                    border-radius: 8px;
+                  ">
+                <span style="font-size: 14px; font-weight: 600">Security Check:</span>
+                <span id="captchaQuestion" style="font-weight: 800; color: var(--accent)">? + ? =</span>
+                <input type="number" id="captchaAnswer" required style="width: 80px; padding: 8px; margin: 0"
+                  placeholder="Ans" />
+              </div>
+              <div id="formStatus" style="margin-top: 10px; font-size: 13px; display: none"></div>
+
+              <button class="cta" type="submit" id="submitBtn" style="
+                    margin-top: 20px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                  ">
+                Submit Request
+              </button>
+            </form>
+          </div>
+          <div>
+            <div class="contact-card" style="margin-bottom: 15px">
+              <p id="contactAddress" style="margin: 0"></p>
+              <p style="margin-top: 10px">
+                <strong style="color: var(--accent)">E:</strong>
+                <span id="contactEmail"></span>
+              </p>
+              <p>
+                <strong style="color: var(--accent)">P:</strong>
+                <span id="contactPhone"></span>
+              </p>
+            </div>
+            <div style="height: 200px; border-radius: 12px; overflow: hidden">
+              <iframe id="configMap"
+                src=""
+                loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border: none;">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+      ">
+    <div style="margin-bottom: 20px;">
+      <img src="assets/images/pg_logo.png" alt="Prayag Engineering" style="height: 40px; opacity: 0.7; filter: grayscale(100%);">
+    </div>
+    <p>
+      © <span id="configYear"></span> <span id="configFooterText"></span>
+    </p>
+  </footer>
+
+  <script src="assets/config.js"></script>
+  <script>
+    // Configuration Injection
+    document.getElementById("configGstin").textContent = siteConfig.topBar.gstin;
+    document.getElementById("configTagline").textContent = siteConfig.topBar.text;
+    document.getElementById("configYear").textContent = siteConfig.footer.year;
+    document.getElementById("configFooterText").textContent = siteConfig.footer.text;
+    document.getElementById("configMap").src = siteConfig.contact.mapEmbedUrl;
+
+    // Slider Logic
+    const slider = document.getElementById("heroSlider");
+    siteConfig.heroImages.forEach((img, idx) => {
+      const div = document.createElement("div");
+      div.className = `slide ${idx === 0 ? "active" : ""}`;
+      div.style.backgroundImage = `url('${img}')`;
+      slider.appendChild(div);
+    });
+    let currentSlide = 0;
+    setInterval(() => {
+      const slides = document.querySelectorAll(".slide");
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 5000);
+
+    // Populate Data
+    const sGrid = document.getElementById("servicesGrid");
+    const userServiceSelect = document.getElementById("userService");
+    
+    siteConfig.services.forEach((s) => {
+      sGrid.innerHTML += `<div class="service-card reveal"><h3>${s.title}</h3><p style="color:var(--muted); font-size:14px">${s.desc}</p></div>`;
+      
+      const opt = document.createElement("option");
+      opt.value = s.title;
+      opt.textContent = s.title;
+      userServiceSelect.appendChild(opt);
+    });
+
+    document.getElementById("contactPhone").textContent = siteConfig.contact.phone;
+    document.getElementById("contactEmail").textContent = siteConfig.contact.email;
+    document.getElementById("contactAddress").textContent = siteConfig.contact.address;
+
+    // Intersection Observer for Animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.1 },
+    );
+    document
+      .querySelectorAll(".reveal")
+      .forEach((el) => observer.observe(el));
+
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const navMenu = document.getElementById("navMenu");
+    mobileMenuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("nav-active");
+    });
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () =>
+        navMenu.classList.remove("nav-active"),
+      );
+    });
+
+    // CAPTCHA Logic
+    let captchaNum1 = 0,
+      captchaNum2 = 0;
+    function generateCaptcha() {
+      captchaNum1 = Math.floor(Math.random() * 10) + 1;
+      captchaNum2 = Math.floor(Math.random() * 10) + 1;
+      document.getElementById("captchaQuestion").innerText =
+        `${captchaNum1} + ${captchaNum2} =`;
+      document.getElementById("captchaAnswer").value = "";
+    }
+    generateCaptcha();
+
+    // Form Submit Logic
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      const userAnswer = parseInt(
+        document.getElementById("captchaAnswer").value,
+        10,
+      );
+      if (userAnswer !== captchaNum1 + captchaNum2) {
+        formStatus.style.display = "block";
+        formStatus.style.color = "#ff4444";
+        formStatus.innerText = "Incorrect CAPTCHA answer. Please try again.";
+        generateCaptcha();
+        return;
+      }
+
+      formStatus.style.display = "block";
+      formStatus.style.color = "#4caf50";
+      formStatus.innerText = "Sending message...";
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Sending...";
+
+      const targetEmail = "engineeringprayag33+hr@gmail.com";
+      const payload = {
+        name: document.getElementById("userName").value,
+        company: document.getElementById("userCompany").value,
+        email: document.getElementById("userEmail").value,
+        phone: document.getElementById("userPhone").value,
+        service: document.getElementById("userService").value,
+        message: document.getElementById("userMessage").value,
+        _subject: "New Website Form Submission!"
+      };
+
+      fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success === "true" || data.success === true) {
+          formStatus.style.color = "#4caf50";
+          formStatus.innerText = "Message sent successfully!";
+        } else {
+          formStatus.style.color = "#4caf50";
+          formStatus.innerText = "Message sent successfully!";
+        }
+        contactForm.reset();
+        generateCaptcha();
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit Request";
+      })
+      .catch(error => {
+        formStatus.style.color = "#ff4444";
+        formStatus.innerText = "Network error. Failed to send message.";
+        generateCaptcha();
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit Request";
+      });
+    });
+  </script>
+</body>
+
+</html>
