@@ -275,7 +275,11 @@
       transform: translateY(0);
     }
 
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+    .services-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
     .service-card {
       background: var(--glass);
@@ -514,9 +518,9 @@
       </a>
       <nav>
         <ul id="navMenu">
-          <li><a href="index.html" style="color: var(--accent);">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html" style="color: var(--accent);">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
@@ -537,132 +541,7 @@
   </header>
 
   <main>
-<section id="home" class="hero">
-  <div id="heroSlider" class="slider-container"></div>
-  <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(7, 16, 33, 0.95) 0%, rgba(7, 16, 33, 0.6) 100%);"></div>
-  <div class="container" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-    <div class="reveal hero-content hero-anim" style="max-width: 900px; text-align: center; margin-top: 80px;">
-          <div style="display: inline-block; padding: 8px 16px; background: rgba(255,122,24,0.1); border: 1px solid var(--accent); border-radius: 30px; color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;">Zero-Compromise Safety Standards</div>
-          <h1 class="hero-title" style="
-                font-size: clamp(35px, 5vw, 60px);
-                line-height: 1.2;
-                margin: 0;
-                font-weight: 900;
-                text-shadow: 0 10px 30px rgba(0,0,0,0.5);
-              ">
-            PRAYAG <span style="color: #007bff">ENGINEERING</span><br />
-            <span style="color: var(--accent); font-size: clamp(28px, 4vw, 45px);">Mechanical Fabrication & Erection</span>
-          </h1>
-          <p style="
-                font-size: 16px;
-                max-width: 700px;
-                margin: 25px auto;
-                color: rgba(255, 255, 255, 0.9);
-                line-height: 1.8;
-              ">
-            Prayag Engineering delivers end-to-end industrial engineering solutions including heavy structural piping, commissioning, maintenance, and operational support.<br><br>
-            We focus on improving plant reliability, maximizing efficiency, and extending equipment lifecycle across power, oil & gas, and process industries.
-          </p>
-          <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px; flex-wrap: wrap;">
-             <a href="#services" class="cta" style="padding: 15px 35px; font-size: 14px; letter-spacing: 2px; transition: all 0.3s;">Explore Services</a>
-             <a href="#contact" class="cta" style="padding: 15px 35px; font-size: 14px; letter-spacing: 2px; background: transparent; border: 2px solid var(--accent); color: var(--accent);">Get a Quote</a>
-          </div>
-    </div></div>
-  </div>
-</section><section class="goal-section">
-      <div class="container">
-        <div class="goal-card reveal">
-          <h2 style="
-                color: var(--accent);
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 12px;
-                margin-bottom: 10px;
-              ">
-            The Objective
-          </h2>
-          <h3 style="font-size: 32px; margin: 0 0 20px 0; font-weight: 800">
-            Precision Engineering. <br />Reliable Execution.
-          </h3>
-          <p style="
-                color: var(--muted);
-                font-size: 17px;
-                max-width: 650px;
-                margin: 0 auto 30px auto;
-              ">
-            Our objective is to redefine industrial site services by combining technical expertise with modern project execution strategies. We ensure safe, efficient, and high-performance operations for all types of industrial plants.
-          </p>
-          <div style="text-align: left; color: var(--white); font-size: 15px; margin: 0 auto; max-width: 650px; display: grid; gap: 10px; grid-template-columns: 1fr 1fr;">
-            <div>✔ Heavy structural fabrication</div>
-            <div>✔ Industrial piping systems</div>
-            <div>✔ Boiler, turbine & STG services</div>
-            <div>✔ Maintenance and operational excellence</div>
-          </div>
-        </div>
-      </div>
-    </section><section id="work" style="background: #0a121f">
-      <div class="container">
-        <div style="text-align: center; margin-bottom: 70px" class="reveal">
-          <h2 style="font-size: 36px; font-weight: 800">Our Workflow</h2>
-          <div style="
-                width: 40px;
-                height: 3px;
-                background: var(--accent);
-                margin: 15px auto;
-              "></div>
-          <p style="color: var(--muted)">
-            A systematic approach to mechanical construction and maintenance.
-          </p>
-        </div>
-
-        <div class="work-grid">
-          <div class="work-step reveal">
-            <span class="step-num">01</span>
-            <span class="work-icon">📋</span>
-            <h3 style="margin-bottom: 10px">Assessment</h3>
-            <ul class="work-list">
-              <li>Technical feasibility study</li>
-              <li>Site inspection and detailed mapping</li>
-              <li>Project planning and resource allocation</li>
-            </ul>
-          </div>
-          <div class="work-step reveal">
-            <span class="step-num">02</span>
-            <span class="work-icon">🛠️</span>
-            <h3 style="margin-bottom: 10px">Fabrication</h3>
-            <ul class="work-list">
-              <li>Heavy steel structure fabrication</li>
-              <li>Pressure vessels, tanks & chimneys</li>
-              <li>Piping fabrication (CS & SS)</li>
-              <li>Quality-controlled workshop processes</li>
-            </ul>
-          </div>
-          <div class="work-step reveal">
-            <span class="step-num">03</span>
-            <span class="work-icon">🏗️</span>
-            <h3 style="margin-bottom: 10px">Erection</h3>
-            <ul class="work-list">
-              <li>Equipment installation and alignment</li>
-              <li>Structural erection and integration</li>
-              <li>Boiler pressure & non-pressure parts erection</li>
-              <li>Conveyor and material handling systems setup</li>
-            </ul>
-          </div>
-          <div class="work-step reveal">
-            <span class="step-num">04</span>
-            <span class="work-icon">🛡️</span>
-            <h3 style="margin-bottom: 10px">Certification</h3>
-            <ul class="work-list">
-              <li>NDT (Non-Destructive Testing)</li>
-              <li>Hydro testing & flushing</li>
-              <li>Safety compliance and quality assurance</li>
-              <li>Final inspection and commissioning approval</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-<section id="services">
+<div style="height:120px; background:rgba(11, 37, 69, 0.9);"></div><section id="services">
       <div class="container">
         <div class="reveal" style="margin-bottom: 40px">
           <h2 style="font-size: 32px; font-weight: 800">
@@ -671,117 +550,22 @@
         </div>
         <div class="services-grid" id="servicesGrid"></div>
       </div>
-    </section>
-
-<section id="industries" style="background: var(--navy);">
-  <div class="container reveal">
-    <div style="text-align: center; margin-bottom: 40px">
-      <h2 style="font-size: 32px; font-weight: 800; display: inline-block; position: relative;">Industries We Serve</h2>
-      <div style="width: 60px; height: 3px; background: var(--accent); margin: 20px auto;"></div>
-      <p style="color: var(--muted); font-size: 16px;">We empower progress across diverse industrial sectors with expert engineering.</p>
-    </div>
-    <div class="industries-grid">
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3 class="industry-title">Power Plants</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.2C7 2.2 3 6.2 3 11.2c0 3 1.4 5.5 3.5 7.2.5.4 1.5 1.6 1.5 3v.6c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V22c0-1.4 1-2.6 1.5-3 2-1.7 3.5-4.2 3.5-7.2 0-5-4-9-9-9z"/></svg></div><h3 class="industry-title">Oil & Gas</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="2" width="18" height="20" rx="2" ry="2"/><path d="M8 6h8M8 10h8M8 14h8M8 18h4"/></svg></div><h3 class="industry-title">Refineries</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3 class="industry-title">Petrochemical</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v8h6V3M9 11v10h6V11M3 21h18"/></svg></div><h3 class="industry-title">Distilleries</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 2v20h18V2H3zm14 16H7V6h10v12z"/></svg></div><h3 class="industry-title">Cement Plants</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg></div><h3 class="industry-title">Steel Plants</h3></div>
-      <div class="industry-card-pro"><div class="industry-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></div><h3 class="industry-title">Food Processing</h3></div>
-    </div>
-  </div>
-</section>
-<section id="why-choose-us" style="background: var(--bg)">
+    </section><section id="industries">
       <div class="container">
-        <div class="reveal" style="text-align: center; margin-bottom: 40px">
-          <h2 style="font-size: 32px; font-weight: 800">Why Choose Prayag Engineering?</h2>
-          <div style="width: 40px; height: 3px; background: var(--accent); margin: 15px auto;"></div>
+        <div class="reveal" style="text-align: center; margin-bottom: 50px">
+          <h2 style="font-size: 36px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">Industries We Serve</h2>
+          <div style="width: 60px; height: 3px; background: var(--accent); margin: 20px auto;"></div>
+          <p style="color: var(--muted); font-size: 16px;">We empower progress across diverse industrial sectors with expert engineering.</p>
         </div>
-        <div class="choose-grid reveal">
-           <div class="choose-item">✔ End-to-end project execution</div>
-           <div class="choose-item">✔ Skilled and experienced workforce</div>
-           <div class="choose-item">✔ Strong safety and quality standards</div>
-           <div class="choose-item">✔ Advanced testing (NDT & commissioning)</div>
-           <div class="choose-item">✔ On-time project delivery</div>
-           <div class="choose-item">✔ Cost-effective and reliable solutions</div>
-        </div>
-      </div>
-    </section><section id="contact" style="background: rgba(11, 37, 69, 0.3)">
-      <div class="container">
-        <h2 style="font-size: 32px; font-weight: 800; margin: 0">
-          Get In Touch
-        </h2>
-        <p style="color: var(--muted); margin-bottom: 40px">
-          Connect with our engineering team for your next shutdown or project.
-        </p>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <form id="contactForm">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New Website Form Submission!">
-              <div class="form-row" style="display: flex; gap: 12px">
-                <input name="name" id="userName" placeholder="Name" required />
-                <input name="company" id="userCompany" placeholder="Company" />
-              </div>
-              <div class="form-row" style="margin-top: 12px; display: flex; gap: 12px">
-                <input name="email" id="userEmail" type="email" placeholder="Email" required />
-                <input name="phone" id="userPhone" type="tel" pattern="[0-9]{10,14}"
-                  placeholder="Phone (e.g. 9876543210)" />
-              </div>
-              <div style="margin-top: 12px">
-                <select name="service" id="userService">
-                  <option value="">Interested Service</option>
-                </select>
-              </div>
-              <textarea name="message" id="userMessage" placeholder="Message" required
-                style="margin-top: 12px; min-height: 100px"></textarea>
-
-              <div style="
-                    margin-top: 12px;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    background: rgba(255, 255, 255, 0.05);
-                    padding: 10px;
-                    border-radius: 8px;
-                  ">
-                <span style="font-size: 14px; font-weight: 600">Security Check:</span>
-                <span id="captchaQuestion" style="font-weight: 800; color: var(--accent)">? + ? =</span>
-                <input type="number" id="captchaAnswer" required style="width: 80px; padding: 8px; margin: 0"
-                  placeholder="Ans" />
-              </div>
-              <div id="formStatus" style="margin-top: 10px; font-size: 13px; display: none"></div>
-
-              <button class="cta" type="submit" id="submitBtn" style="
-                    margin-top: 20px;
-                    border: none;
-                    cursor: pointer;
-                    width: 100%;
-                  ">
-                Submit Request
-              </button>
-            </form>
-          </div>
-          <div>
-            <div class="contact-card" style="margin-bottom: 15px">
-              <p id="contactAddress" style="margin: 0"></p>
-              <p style="margin-top: 10px">
-                <strong style="color: var(--accent)">E:</strong>
-                <span id="contactEmail"></span>
-              </p>
-              <p>
-                <strong style="color: var(--accent)">P:</strong>
-                <span id="contactPhone"></span>
-              </p>
-            </div>
-            <div style="height: 200px; border-radius: 12px; overflow: hidden">
-              <iframe id="configMap"
-                src=""
-                loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border: none;">
-              </iframe>
-            </div>
-          </div>
+        <div class="industries-grid reveal">
+          <div class="premium-card"><div class="card-icon">🏭</div><h3 style="color: white; margin: 0;">Power Plants (Thermal & Biomass)</h3></div>
+          <div class="premium-card"><div class="card-icon">🛢️</div><h3 style="color: white; margin: 0;">Oil & Gas</h3></div>
+          <div class="premium-card"><div class="card-icon">⚙️</div><h3 style="color: white; margin: 0;">Refineries</h3></div>
+          <div class="premium-card"><div class="card-icon">🧪</div><h3 style="color: white; margin: 0;">Petrochemical</h3></div>
+          <div class="premium-card"><div class="card-icon">⚗️</div><h3 style="color: white; margin: 0;">Distilleries</h3></div>
+          <div class="premium-card"><div class="card-icon">🏗️</div><h3 style="color: white; margin: 0;">Cement Plants</h3></div>
+          <div class="premium-card"><div class="card-icon">🏢</div><h3 style="color: white; margin: 0;">Steel Plants</h3></div>
+          <div class="premium-card"><div class="card-icon">🥫</div><h3 style="color: white; margin: 0;">Food Processing Units</h3></div>
         </div>
       </div>
     </section>
