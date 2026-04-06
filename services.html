@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Prayag Engineering - Mechanical Fabrication, Erection & Maintenance Services</title>
-  <meta name="description" content="Prayag Engineering specializes in heavy structural fabrication, mechanical erection, industrial piping, and maintenance for power, oil & gas, and process industries." />
+  <meta name="description"
+    content="Prayag Engineering specializes in heavy structural fabrication, mechanical erection, industrial piping, and maintenance for power, oil & gas, and process industries." />
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <style>
     /* =========================
@@ -248,7 +249,7 @@
     .step-num {
       font-size: 48px;
       font-weight: 900;
-      color: rgba(255, 122, 24, 0.1);
+      color: #ffffff;
       position: absolute;
       top: 10px;
       right: 20px;
@@ -366,7 +367,8 @@
       }
     }
 
-    .work-list, .service-list {
+    .work-list,
+    .service-list {
       margin: 0;
       padding-left: 20px;
       color: var(--muted);
@@ -374,7 +376,7 @@
       line-height: 1.8;
       text-align: left;
     }
-    
+
     .industries-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -433,7 +435,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s;
     }
 
@@ -446,8 +448,8 @@
     }
 
     .premium-card {
-      background: linear-gradient(to bottom, rgba(11,37,69,0.9), rgba(11,37,69,0.95)), url('assets/images/industrial_bg.png') center/cover;
-      border: 1px solid rgba(255,122,24,0.1);
+      background: linear-gradient(to bottom, rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.95)), url('assets/images/industrial_bg.png') center/cover;
+      border: 1px solid rgba(255, 122, 24, 0.1);
       padding: 40px 20px;
       transition: all 0.4s ease;
       position: relative;
@@ -458,25 +460,35 @@
       justify-content: center;
       min-height: 200px;
     }
+
     .premium-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(255,122,24,0.05);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 122, 24, 0.05);
       opacity: 0;
       transition: 0.4s;
     }
+
     .premium-card:hover {
       transform: translateY(-10px);
       border-color: var(--accent);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
-    .premium-card:hover::before { opacity: 1; }
+
+    .premium-card:hover::before {
+      opacity: 1;
+    }
+
     .premium-card .card-icon {
       font-size: 40px;
       margin-bottom: 15px;
       z-index: 1;
     }
+
     .premium-card h3 {
       font-size: 16px;
       margin: 0;
@@ -490,16 +502,30 @@
         margin-top: 60px;
         text-align: center;
       }
+
       .hero-box {
         padding: 30px 20px !important;
         margin: 0 15px !important;
       }
+
       h1.hero-title {
         font-size: 36px !important;
       }
-      .top-bar { font-size: 11px; padding: 0 10px; }
-      .nav-inner .logo span { display: none; } /* Hide text on small screens */
-      .services-grid, .industries-grid, .work-grid, .choose-grid {
+
+      .top-bar {
+        font-size: 11px;
+        padding: 0 10px;
+      }
+
+      .nav-inner .logo span {
+        display: none;
+      }
+
+      /* Hide text on small screens */
+      .services-grid,
+      .industries-grid,
+      .work-grid,
+      .choose-grid {
         grid-template-columns: 1fr !important;
       }
     }
@@ -514,7 +540,9 @@
     <div class="container nav-inner">
       <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px">
         <img src="assets/images/pg_logo.png" alt="Prayag Engineering Logo" style="height: 40px; object-fit: contain" />
-        <span style="font-size: 18px; font-weight: 800; letter-spacing: 1px; color: var(--white); text-transform: uppercase;">Prayag Engineering</span>
+        <span
+          style="font-size: 18px; font-weight: 800; letter-spacing: 1px; color: var(--white); text-transform: uppercase;">Prayag
+          Engineering</span>
       </a>
       <nav>
         <ul id="navMenu">
@@ -541,7 +569,8 @@
   </header>
 
   <main>
-<div style="height:120px; background:rgba(11, 37, 69, 0.9);"></div><section id="services">
+    <div style="height:120px; background:rgba(11, 37, 69, 0.9);"></div>
+    <section id="services">
       <div class="container">
         <div class="reveal" style="margin-bottom: 40px">
           <h2 style="font-size: 32px; font-weight: 800">
@@ -550,26 +579,84 @@
         </div>
         <div class="services-grid" id="servicesGrid"></div>
       </div>
-    </section><section id="industries">
-      <div class="container">
-        <div class="reveal" style="text-align: center; margin-bottom: 50px">
-          <h2 style="font-size: 36px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">Industries We Serve</h2>
+    </section>
+    <section id="industries" style="background: var(--navy);">
+      <div class="container reveal">
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2 style="font-size: 32px; font-weight: 800; display: inline-block; position: relative;">Industries We Serve
+          </h2>
           <div style="width: 60px; height: 3px; background: var(--accent); margin: 20px auto;"></div>
-          <p style="color: var(--muted); font-size: 16px;">We empower progress across diverse industrial sectors with expert engineering.</p>
+          <p style="color: var(--muted); font-size: 16px;">We empower progress across diverse industrial sectors with
+            expert engineering.</p>
         </div>
-        <div class="industries-grid reveal">
-          <div class="premium-card"><div class="card-icon">🏭</div><h3 style="color: white; margin: 0;">Power Plants (Thermal & Biomass)</h3></div>
-          <div class="premium-card"><div class="card-icon">🛢️</div><h3 style="color: white; margin: 0;">Oil & Gas</h3></div>
-          <div class="premium-card"><div class="card-icon">⚙️</div><h3 style="color: white; margin: 0;">Refineries</h3></div>
-          <div class="premium-card"><div class="card-icon">🧪</div><h3 style="color: white; margin: 0;">Petrochemical</h3></div>
-          <div class="premium-card"><div class="card-icon">⚗️</div><h3 style="color: white; margin: 0;">Distilleries</h3></div>
-          <div class="premium-card"><div class="card-icon">🏗️</div><h3 style="color: white; margin: 0;">Cement Plants</h3></div>
-          <div class="premium-card"><div class="card-icon">🏢</div><h3 style="color: white; margin: 0;">Steel Plants</h3></div>
-          <div class="premium-card"><div class="card-icon">🥫</div><h3 style="color: white; margin: 0;">Food Processing Units</h3></div>
+        <div class="industries-grid">
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Power Plants</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M12 2.2C7 2.2 3 6.2 3 11.2c0 3 1.4 5.5 3.5 7.2.5.4 1.5 1.6 1.5 3v.6c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V22c0-1.4 1-2.6 1.5-3 2-1.7 3.5-4.2 3.5-7.2 0-5-4-9-9-9z" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Oil & Gas</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="2" width="18" height="20" rx="2" ry="2" />
+                <path d="M8 6h8M8 10h8M8 14h8M8 18h4" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Refineries</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Petrochemical</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 3v8h6V3M9 11v10h6V11M3 21h18" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Distilleries</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 2v20h18V2H3zm14 16H7V6h10v12z" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Cement Plants</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                <path d="M2 12h20" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Steel Plants</h3>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon" style="margin-bottom: 10px; color: var(--accent);"><svg width="40" height="40"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3" />
+              </svg></div>
+            <h3 class="industry-title" style="margin: 0;">Food Processing</h3>
+          </div>
         </div>
       </div>
     </section>
-</main>
+  </main>
 
   <footer style="
         padding: 40px 0;
@@ -579,14 +666,15 @@
         color: var(--muted);
       ">
     <div style="margin-bottom: 20px;">
-      <img src="assets/images/pg_logo.png" alt="Prayag Engineering" style="height: 40px; opacity: 0.7; filter: grayscale(100%);">
+      <img src="assets/images/pg_logo.png" alt="Prayag Engineering"
+        style="height: 40px; opacity: 0.7; filter: grayscale(100%);">
     </div>
     <p>
       © <span id="configYear"></span> <span id="configFooterText"></span>
     </p>
   </footer>
 
-      <script src="assets/config.js"></script>
+  <script src="assets/config.js"></script>
   <script>
     const safeSetText = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
     const safeSetSrc = (id, src) => { const el = document.getElementById(id); if (el) el.src = src; };
@@ -608,7 +696,7 @@
       let currentSlide = 0;
       setInterval(() => {
         const slides = document.querySelectorAll(".slide");
-        if(slides.length > 0) {
+        if (slides.length > 0) {
           slides[currentSlide].classList.remove("active");
           currentSlide = (currentSlide + 1) % slides.length;
           slides[currentSlide].classList.add("active");
@@ -618,7 +706,7 @@
 
     const sGrid = document.getElementById("servicesGrid");
     const userServiceSelect = document.getElementById("userService");
-    
+
     siteConfig.services.forEach((s) => {
       if (sGrid) {
         sGrid.innerHTML += `<div class="service-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
@@ -697,29 +785,31 @@
           method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
           body: JSON.stringify(payload)
         })
-        .then(response => response.json())
-        .then(data => {
-          formStatus.style.color = "#4caf50"; formStatus.innerText = "Message sent successfully!";
-          contactForm.reset(); generateCaptcha(); submitBtn.disabled = false; submitBtn.innerText = "Submit Request";
-        })
-        .catch(error => {
-          formStatus.style.color = "#ff4444"; formStatus.innerText = "Network error. Failed to send message.";
-          generateCaptcha(); submitBtn.disabled = false; submitBtn.innerText = "Submit Request";
-        });
+          .then(response => response.json())
+          .then(data => {
+            formStatus.style.color = "#4caf50"; formStatus.innerText = "Message sent successfully!";
+            contactForm.reset(); generateCaptcha(); submitBtn.disabled = false; submitBtn.innerText = "Submit Request";
+          })
+          .catch(error => {
+            formStatus.style.color = "#ff4444"; formStatus.innerText = "Network error. Failed to send message.";
+            generateCaptcha(); submitBtn.disabled = false; submitBtn.innerText = "Submit Request";
+          });
       });
     }
   </script>
 
   <!-- Floating Actions -->
   <div class="floating-actions">
-    <a href="https://wa.me/918630468953" target="_blank" rel="noopener noreferrer" class="float-btn wa">
+    <a href="https://wa.me/918630463472" target="_blank" rel="noopener noreferrer" class="float-btn wa">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.937 3.112 6.937 6.937s-3.112 6.937-6.937 6.937z"/>
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.937 3.112 6.937 6.937s-3.112 6.937-6.937 6.937z" />
       </svg>
     </a>
-    <a href="tel:+918630468953" class="float-btn call">
+    <a href="tel:+918630463472" class="float-btn call">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-        <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+        <path
+          d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z" />
       </svg>
     </a>
   </div>
