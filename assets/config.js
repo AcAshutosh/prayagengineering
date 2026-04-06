@@ -8,7 +8,7 @@ const siteConfig = {
   },
 
   contact: {
-    phone: "+91 8630468953",
+    phone: "+91 8630463472",
     email: "engineeringprayag33@gmail.com",
     address: "Arazi no. 261 MI, Mauja dhanuha Karchana, Prayagraj, Uttar Pradesh 212301",
     mapEmbedUrl: "https://www.google.com/maps?q=Arazi+no.+261+MI,+Mauja+Dhanuha+Karchana,+Prayagraj,+Uttar+Pradesh+212301&output=embed"
